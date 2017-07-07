@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">                                              </meta>
+    <title>oRIGAmI</title>
+    <link rel="icon" type="image/png" href="pictures/origami.png">                                                      </link>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">                              </link>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"></link>
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection">                             </link>
+    <link rel="stylesheet" href="css/materialize2.min.css">    </link>
+    <link rel="stylesheet" href="css/materialize.min.css"> </link>
+    <link rel="stylesheet" href="bower_components/ng-materialize/src/ng-materialize.scss">                              </link>
+    <link rel="stylesheet" href="bower_components/angular.snackbar-master/css/angular.snackbar.js"></link>
+
+    <script  src="js/baseJs/jquery.js">                                                                                 </script>
+    <script  src="bower_components/angular/angular.min.js">                                                             </script>
+    <script  src="bower_components/ng-materialize/src/ng-materialize.js">                                               </script>
+    <script  src="bower_components/ngstorage/ngStorage.min.js">                                                         </script>
+    <script  src="bower_components/angular-jwt/dist/angular-jwt.min.js">                                                </script>
+    <script  src="bower_components/angular.snackbar-master/angular.snackbar.min.js">                                    </script>
+
+    <script  src="lib/angular/angular-route.js">                                                                        </script>
+    <script  src="js/app.js">                                                                                           </script>
+    <script  src="js/controllers/pagMainCtrl.js">                                                                       </script>
+    <script  src="js/controllers/loginCtrl.js">                                                                         </script>
+    <script  src="js/controllers/perfilCtrl.js">                                                                        </script>
+    <script  src="js/controllers/materializeCtrl.js">                                                                   </script>
+    <script  src="js/service/serviceLogin.js">                                                              </script>
+    <script  src="js/service/constantesService.js" >                                                        </script>
+    <script  src="js/config/routeConfig.js">                                                                            </script>
+    <script  src="js/baseJs/base.js">                                                                                   </script>
+  </head>
+  <body ng-controller="pagMainCtrl">
+     <div ng-view ></div>
+  </body>
+</html>

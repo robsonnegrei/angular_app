@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <script  src="bower_components/ng-materialize/src/ng-materialize.js">                                               </script>
+        <script  src="js/controllers/ideiasCtrl.js">                                                                        </script>
+        <script  src="js/controllers/perfilCtrl.js">                                                                        </script>
+        <script  src="js/controllers/materializeCtrl.js">                                                                   </script>
+        <script  src="js/controllers/comentariosCtrl.js">                                                                   </script>
+        <script  src="js/controllers/discussaoCtrl.js">                                                                     </script>
+        <script  src="js/service/constantesService.js" >                                                                    </script>
+        <script  src="js/config/routeConfig.js">                                                                            </script>
+        <script  src="js/baseJs/base.js">                                                                                   </script>
+  </head>
+  <body ng-controller="ideiasCtrl">
+    <ng-include src="'views/componentes/header.html'"></ng-include>
+    <section>
+     <div class="row" >
+      <div ng-show="messegeErro.$dirty" ng-bind="messegeErro" class="col s12 orange deep-orange alert-area"></div>
+      <!--menu lateral -->
+      <ng-include src="'views/componentes/menuLateral.html'"></ng-include>
+      <!-- Espaço de Trabalho -->
+      <div class="col s12 m4 l8 espaco-de-trabalho">
+        <ng-include src="'views/participante/cabecalho.html'"></ng-include>
+        <ng-include src="'views/participante/adicionarIdeia.html'"></ng-include>
+        <ul class="collection" ng-init="init()">
+          <li ng-repeat="ideia in ideias" class="collection-item avatar">
+            <blockquote><h5>{{ideia.texto}}</h5></blockquote>
+            <a ng-click="verDetalhesIdeia(ideia)" style="cursor:pointer;">Ver Comentários</a>
+            <div class="row">
+              <div ng-repeat="autor in ideia.autor" class="chip right">
+                <img ng-src="pictures/{{autor.img}}"  alt="Dono"></img>
+                {{autor.nome}}
+              </div>
+            </div>
+            <div class="">
+              <div class="fixed-action-btn horizontal click-to-toggle secondary-content"  style="bottom: 45px; right: 24px;">
+                <button ng-click="removerIdeia(ideia)"  onclick=" Materialize.toast('Ideia Excluida', 2000, 'rounded')"  class="btn-floating  secondary-content  btn-floating red darken-1">
+                  <i class="material-icons">delete</i>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- area de conversas -->
+      <ng-include src="'views/componentes/areaConversas.html'"></ng-include>
+    </div>
+    </section>
+  </body>
+</html>

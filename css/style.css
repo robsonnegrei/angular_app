@@ -1,0 +1,41 @@
+.menu-lateral{
+  background-color: #eeeeee;
+  padding-top: 2px;
+  margin-top: 8px;
+}
+.div-menu-lateral{
+  border: 2px;
+}
+.alert-area{
+  background-color: #cddc39;
+  float: right;
+}
+.espaco-de-trabalho{
+  background-color: ##BDBDBD;
+}
+.grupo-area{
+  background-color: #FFFFFF;
+  height: 530px;
+
+}
+.body-main{
+  #background-color: #e0e0e0;
+}
+.rodape{
+  background: #37474f;
+}
+.notify-left{
+  float: right;
+}
+.logo{
+  margin-left: 20px;
+}
+.cabecalhoDiscussao{
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.selecionado{
+  text-align: bold;
+  background-color: : #ea80fc;
+}
